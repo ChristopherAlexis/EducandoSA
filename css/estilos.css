@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+img ,.banner__img{
+    width: 100%;
+}
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 1.5px;
+}
+.section__titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #FBA919; 
+}
+.contenedor{
+    margin: auto;
+    width: 98%;
+    
+}
+/*-------------------------Estilo del header-------------------------*/
+.header {
+    height: 60px;
+}
+.header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+.logo, .icon-menu {
+    margin: 5px;
+    color: #fff;
+}
+.icon-menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #FBA919;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/* ----------Estilos del menu----------*/
+.nav {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;   
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu__link {
+    display: block;
+    padding: 15px;
+    background: #FBA919;
+    text-decoration: none;
+    color:#fff;
+    
+}
+.menu__link:hover,.select {
+    background: white;
+    color: #FBA919;
+}
+
+.mostrar {
+    left: 0;
+}
+
+/*----------Estilos del banner----------*/
+.banner {
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+}
+
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.banner__txt{
+    display: none;
+}
+      
+/*-----------Estilos de info-----------*/ 
+.info__columma{
+    background: #FBA919;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin: 5px;
+ 
+}
+
+/*----------Estilos de cursos----------*/
+.cursos__columna{
+    position: relative;
+    margin-bottom: 30px;
+}
+.cursos__descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+}
+.cursos__titulo{
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+/*---------Estilos de Footer---------*/
+.footer{
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    
+}
+
+/*-------Estilos responsive tamaño de celular-------*/
+@media(min-width:480px){
+    .logo{
+        font-size: 40px;
+    }
+    .banner__titulo{
+        font-size: 20px;
+        margin: 5px 5;
+    }
+    .banner__txt{ 
+        display: block;
+        font-size: 18px;
+        margin: 7px 0;
+    }
+    .info,.cursos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -90px;
+    }
+    .info__columna{
+        width: 32%;
+        
+    }
+    .info__titulo{
+        font-size: 20px;
+        margin: 5px 0;
+    }
+    .section__titulo {
+        width: 100%;
+        margin: 5px;
+       
+    }
+    .info__txt{
+        font-size: 15px;
+    }
+    .cursos{
+        display:flex;
+        flex-wrap: wrap;/*Para que el contenido se valla hacia abajo*/
+        margin-top: 0;
+    }
+    .cursos__txt{
+        overflow: hidden;
+        font-size: 12px;
+    }
+    .cursos__columna {
+        width: 49%;
+    } 
+    .footer .social [class^="icon-"] {
+    margin: 10 10px;
+    }
+    
+}
+/*-------Estilos responsive tamaño de tablet-------*/
+@media(min-width:768px) {
+    .banner__titulo {
+        font-size: 50px;
+    }
+    .cursos__titulo {
+        font-size: 40px;
+    }
+}
+/*-------Estilos responsive tamaño escritorio-------*/
+@media(min-width:1024px) {
+    .contenedor{
+        width: 1000px;
+    }
+    .section__titulo{
+        font-size: 50px;
+        margin: 30px 0;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu{
+        display: flex;/*para que el menu no sea en cascada sino en linea recta echada*/
+    }
+    .icon-menu{
+        display: none;/*para quitarle el icono de menu*/
+    }
+    .menu__link{
+        background: none;
+        font-family: monospace;
+        font-size: 25px;
+    }
+    
+    .menu__link:hover,.select{
+        background: #FBA919;
+        color: #fff;
+    }
+    .banner__titulo {
+        font-size: 60px;
+    }
+    .banner__txt{
+        font-size: 25px;
+    }
+    .info{
+        margin-top: -200px;
+    }
+    .info__columna{
+        padding: 30px;
+    }
+    .info__titulo {
+        font-size: 40px;
+        text-align: center;
+    }
+    .cursos__titulo{
+        font-size: 50px;
+    }
+    .cursos__txt{
+        font-size: 20px;
+    }
+    .cursos__descripcion{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;       
+    }
+    @media(min-width:1280px){
+        .contenedor{
+            width: 1200px;
+        }
+        .logo{
+            font-size: 60px;
+        }
+        .banner .contenedor{
+            top: 40%;
+        }
+        .info{
+            margin-top: -220px;
+        }
+    }
+}
